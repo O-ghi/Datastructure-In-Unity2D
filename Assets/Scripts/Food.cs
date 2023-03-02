@@ -3,9 +3,10 @@
 public class Food : MonoBehaviour
 {
     public Collider2D gridArea;
-    public Color color;
+    public SpriteRenderer sprite;
     private void Start()
     {
+        sprite = transform.GetComponent<SpriteRenderer>();
         RandomizePosition();
     }
 
@@ -26,5 +27,12 @@ public class Food : MonoBehaviour
     {
         RandomizePosition();
     }
-
+    public void SetColor(Color color)
+    {
+        sprite.color = color;
+    }
+    public Color GetColor()
+    {
+        return sprite.color;
+    }
 }
