@@ -3,7 +3,7 @@
 public class Food : MonoBehaviour
 {
     public Collider2D gridArea;
-    private Color color;
+    public Color color;
     private void Start()
     {
         RandomizePosition();
